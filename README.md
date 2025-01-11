@@ -9,3 +9,33 @@ license: mit
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
+---
+
+Step 1: Create a Docker Container in Hugging Face Space
+Navigate to the Hugging Face Spaces.
+Create a new Space and select Docker as the runtime environment.
+Configure the basic details such as the project name and visibility (public or private).
+
+Step 2: Push Code to Hugging Face Space
+Clone the repository for your Space:
+
+Copy code
+$ git clone <your-space-url>
+Copy your project files into the cloned repository directory.
+Commit and push the files to the Space repository:
+
+$ git add .
+$ git commit -m "Initial project setup"
+$ git push
+
+Step 3: Set Variables and Secrets in Settings
+Go to the Settings tab of your Space on Hugging Face.
+Add necessary environment variables and secrets such as API keys or database credentials.
+Example:
+ARTIFACT_STORE_URI=<S3 Bucket>
+AWS_ACCESS_KEY_ID=<Access Key >
+AWS_SECRET_ACCESS_KEY=<Access Secret>
+BACKEND_STORE_URI=<your-database-url>
+PORT=7860
+
